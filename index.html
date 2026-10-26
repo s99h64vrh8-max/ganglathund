@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Gänglathund M3–M90</title>
+<meta name="description" content="Metrisk ISO-gänga 6g/6H, M3–M90, verifierade värden.">
+<meta name="theme-color" content="#0a5bd8">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Gänglathund">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--BODY-->
+<header>
+  <div class="top"><h1>Gänglathund M3–M90</h1><button class="theme" id="theme" aria-label="Byt ljust/mörkt läge">◐</button></div>
+  <nav role="tablist">
+    <button role="tab" data-tab="sok" aria-selected="true">Sök</button>
+    <button role="tab" data-tab="ut" aria-selected="false">Utv. 6g</button>
+    <button role="tab" data-tab="in" aria-selected="false">Inv. 6H</button>
+    <button role="tab" data-tab="info" aria-selected="false">Info</button>
+  </nav>
+</header>
+<main>
+  <section id="tab-sok">
+    <input id="q" class="search" type="search" inputmode="text" autocomplete="off" placeholder="Skriv t.ex. M24 eller 24" aria-label="Sök dimension">
+    <div id="cards"></div>
+    <div class="chips" id="chips"></div>
+  </section>
+  <section id="tab-ut" class="hide"><p class="note">Utvändig gänga 6g (skruv/bult). Mått i mm. Tryck på en rad för kortet.</p><div class="tw"><table id="t-ut"></table></div></section>
+  <section id="tab-in" class="hide"><p class="note">Invändig gänga 6H (mutter/hål). Mått i mm. Tryck på en rad för kortet.</p><div class="tw"><table id="t-in"></table></div></section>
+  <section id="tab-info" class="hide">
+    <div class="card">
+      <h3>Om värdena</h3>
+      <p>Metrisk ISO-gänga, grovgänga, toleransklass 6g (utvändig) och 6H (invändig) enligt ISO 965-2:2024, normal inskruvningslängd. Stigningar enligt ISO 261. Samma värden som i Page och PDF "Gänglathund M3–M90".</p>
+      <p>Dubbelkontrollerad 26 okt 2026: alla gränsmått för d, d2, D2 och D1, M3–M90, stämmer exakt med minst två oberoende publicerade tabeller. "Kontroll" anger antalet källor.</p>
+      <ul>
+        <li><b>d3</b> är grundmått (teoretiskt, d − 1,226869·P), inte ett toleransmått. En 6g-skruvs verkliga d3 är något mindre.</li>
+        <li><b>Borr</b> = rekommenderad kärnhålsborr (DIN 336). Den ligger inom D1-toleransen.</li>
+        <li>Bara en källa: borret för M85 (79,0). För M25×2 finns d, d2 och D2 i en publicerad tabell, plus beräkning enligt ISO 965-1.</li>
+        <li>M72–M90 med P 6 står formellt i fingängkolumnen i ISO 261, men används som grovgänga.</li>
+        <li>M25 har ingen grovgänga. M25×1,5 är vanligast.</li>
+      </ul>
+      <p class="note">Källor: ISO 965-2:1998/2024, fasteners.eu, EngineersEdge, Ferrobolt (ASME B1.13M), Güldner, DIN 13-1/DIN 336 (Wikipedia), calxia, APPORO, Camtech. Vid kritiska mått gäller originalstandarden.</p>
+      <p class="note" id="offline"></p>
+    </div>
+  </section>
+</main>
+<!--/BODY-->
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
